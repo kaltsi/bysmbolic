@@ -1,7 +1,7 @@
 LFLAGS?=-Wl,-Bsymbolic
 
 all:
-	g++ -fpic -shared -Wall $(CFLAGS) -o libzhared.so $(LFLAGS) zhared.cpp
+	g++ -fPIC -shared -Wall $(CFLAGS) -o libzhared.so $(LFLAGS) zhared.cpp
 	g++ -fPIE -Wall $(CFLAGS) -o main main.cpp -L. -lzhared
 
 
